@@ -101,6 +101,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_env ]; then
+    . ~/.bash_env
+fi
+
 if [ -f ~/.bash_export ]; then
     . ~/.bash_export
 fi
@@ -117,3 +121,4 @@ if ! shopt -oq posix; then
 fi
 
 export PATH=/usr/local/bin:/opt/helm-linux-amd64:/home/robin/Documents/code/bash:$PATH
+source <(kubectl completion bash)
