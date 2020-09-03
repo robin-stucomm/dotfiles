@@ -13,6 +13,7 @@ alias fwork="cd $HOME/Documents/work/FunctionalTesting && ll"
 alias vbash="vim ~/.bashrc"
 alias reload="source ~/.bashrc"
 alias copy="xclip -sel c < $1"
+alias 1="echo -n \"één\" | xclip -sel c"
 alias keeper="copy ~/Documents/keys/keeper.txt"
 
 alias gs="git status"
