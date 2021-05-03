@@ -5,6 +5,7 @@ alias ls="ls -G --color"
 alias la="ls -G -al --color"
 alias lg="ls -G -al --color | grep --color=always $@"
 alias myip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+alias cip="curl 'https://api.ipify.org?format=json'"
 
 alias code="cd $HOME/Documents/code && ll"
 alias work="cd $HOME/Documents/work && ll"
@@ -28,11 +29,15 @@ alias dif="diff"
 alias fuck="git reset --hard origin/HEAD"
 alias log-id='git log | awk '\''{print substr($0,8,7);exit}'\'''
 
+alias headless="npm run test -- --browsers ChromeHeadlessNoSandbox --source-map=true --watch=false"
+
 alias filepath="readlink -f $1"
 
 alias default-zoom="set-zoom 1.3"
 
 alias rebootw="sudo grub-reboot 1 && sudo reboot"
+
+alias removecache="rm -rf $HOME/.gradle/caches/"
 
 remove() {
     sudo apt purge $1
@@ -52,7 +57,7 @@ nuke_port() {
 
 function create-feature() {
     git checkout -b feature/$1
-    git push -u origin feature/$1
+    git push --no-verify -u origin feature/$1
 }
 
 function update() {

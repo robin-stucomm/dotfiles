@@ -120,5 +120,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=/usr/local/bin:/opt/helm-linux-amd64:/home/robin/Documents/code/bash:$PATH
+export PATH=/usr/local/bin:/opt/helm-linux-amd64:/home/robin/Documents/code/bash:/opt/liquibase:/opt/act:/opt/adb:$PATH
 source <(kubectl completion bash)
