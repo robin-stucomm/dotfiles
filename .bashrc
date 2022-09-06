@@ -120,5 +120,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=/usr/local/bin:/opt/helm-linux-amd64:/home/robin/Documents/code/bash:/opt/liquibase:/opt/act:/opt/adb:$PATH
+export PATH=/home/robin/.jdks/adopt-openjdk-14.0.2/bin:/usr/local/bin:/opt/liquibase:/opt/helm-linux-amd64:/home/robin/Documents/code/bash:/opt/liquibase:/opt/act:/opt/adb:$PATH
 source <(kubectl completion bash)
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
+source $HOME/.poetry/env
